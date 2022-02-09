@@ -19,14 +19,24 @@ body {
   border: 5px solid #999;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   background: #888;
   box-shadow: 0px 0px 20px #fff;
 }
 .clks {
-  width: 250px;
-  height: 250px;
+  width: 166.67px;
+  height: 166.67px;
   font-size: 0.1px;
+}
+@media (max-width: 600px) {
+  .grid {
+    width: 300px;
+    height: 300px;
+  }
+  .clks {
+    width: 100px;
+    height: 100px;
+  }
 }
 #pic1 {
   background: url('1.jpeg');
@@ -48,19 +58,44 @@ body {
   background-size: contain;
   background-position: center;
 }
+#pic5 {
+  background: url('5.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic6 {
+  background: url('6.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic7 {
+  background: url('7.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic8 {
+  background: url('8.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic9 {
+  background: url('9.jpeg');
+  background-size: contain;
+  background-position: center;
+}
 
 .launch {
   width: 170px;
   margin: auto;
-  border: 2px solid #999;
+  border: 2px solid #fff;
   height: 40px;
   text-align: center;
   padding-top: 10px;
   color: black;
-  background: #999;
+  background: #ff0;
   border-radius: 5px;
   box-shadow: 0px 0px 20px #fff;
-  text-shadow: 0px 0px 10px #000;
+  text-shadow: 0px 0px 10px #222;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
@@ -74,15 +109,54 @@ body {
   width: 250px;
   height: 40px;
   margin: auto;
-  border: 2px solid #999;
+  border: 2px solid #fff;
   border-radius: 5px;
   text-align: center;
   padding-top: 10px;
   color: #000;
-  background: #999;
-  box-shadow: 0px 0px 20px #999;
+  background: #ff0;
+  box-shadow: 0px 0px 20px #fff;
   text-shadow: 0px 0px 20px #000;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+}
+
+.back {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: 2rem;
+  width: 5rem;
+  border-radius: 10px;
+  background: #ff0;
+  border: 2px solid #fff;
+  color: #222;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 20px #fff;
+  font-size: 1.5rem;
+}
+.back:active {
+  outline: 0;
+  transform: scale(0.9);
+}
+
+a:link {
+  color: #222;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+a:active {
+  color: #222;
+  text-decoration: none;
 }

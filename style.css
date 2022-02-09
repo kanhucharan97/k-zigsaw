@@ -365,18 +365,18 @@ body {
     width: 15px;
     /* background: red; */
     position: relative;
-    animation: animate 0.75s ease-in-out forwards;
+    -webkit-animation: animate 0.75s ease-in-out forwards;
   }
 
   .blocks:nth-child(even) {
-    animation: animate 1s ease-in-out forwards;
+    -webkit-animation: animate 1s ease-in-out forwards;
   }
   .blocks:nth-child(5n + 5) {
-    animation: animate 2.5s ease-in-out forwards;
+    -webkit-animation: animate 2.5s ease-in-out forwards;
   }
 
   .blocks:nth-child(7n + 3) {
-    animation: animate 1.5s ease-in-out forwards;
+    -webkit-animation: animate 1.5s ease-in-out forwards;
   }
 
   @keyframes animate {
@@ -628,4 +628,22 @@ a:hover {
 a:active {
   color: #222;
   text-decoration: none;
+}
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
 }

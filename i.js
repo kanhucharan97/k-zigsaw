@@ -23,14 +23,14 @@ const btnC = document.querySelector('.btnC')
 const btnB = document.querySelector('.btnB')
 const btnA = document.querySelector('.btnA')
 // =================clip1==============
-let no = 0
+let nom = 0
 document.querySelector('.clip1').addEventListener('click', () => {
   document.querySelector('.clip1').classList.toggle('togglerA')
   // btnA.classList.toggle('btnToggler')
   block[0].classList.toggle('blockToggler')
-  nom = 1
-  if (nom === 1) {
-    nom = 0
+
+  if (nom === 0) {
+    nom = 1
     document
       .querySelectorAll('.sbtn2')
       .forEach((s) => (s.style.transform = 'scale(0)'))
@@ -45,8 +45,8 @@ document.querySelector('.clip1').addEventListener('click', () => {
     document.querySelector('.btnD').style.transform = 'scale(0)'
     document.querySelector('.btnE').style.transform = 'scale(0)'
     document.querySelector('.btnF').style.transform = 'scale(0)'
-  } else if (nom === 0) {
-    nom = 1
+  } else if (nom === 1) {
+    nom = 0
     document
       .querySelectorAll('.sbtn2')
       .forEach((s) => (s.style.transform = 'scale(0)'))
@@ -112,25 +112,46 @@ document.querySelectorAll('.sbtn1').forEach((s) =>
 // end of clip1========================
 
 // clip2================================
+let nomB = 0
 document.querySelector('.clip2').addEventListener('click', () => {
   document.querySelector('.clip2').classList.toggle('togglerB')
   // btnB.classList.toggle('btnToggler')
   block[1].classList.toggle('blockToggler')
+  if (nomB === 0) {
+    nomB = 1
+    document
+      .querySelectorAll('.sbtn1')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn3')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn2')
+      .forEach((s) => (s.style.transform = 'scale(1)'))
 
-  document
-    .querySelectorAll('.sbtn1')
-    .forEach((s) => (s.style.transform = 'scale(0)'))
-  document
-    .querySelectorAll('.sbtn3')
-    .forEach((s) => (s.style.transform = 'scale(0)'))
-  document
-    .querySelectorAll('.sbtn2')
-    .forEach((s) => (s.style.transform = 'scale(1)'))
+    document.querySelector('.btnA').style.transform = 'scale(0)'
+    document.querySelector('.btnB').style.transform = 'scale(0)'
+    document.querySelector('.btnE').style.transform = 'scale(0)'
+    document.querySelector('.btnF').style.transform = 'scale(0)'
+  } else if (nomB === 1) {
+    nomB = 0
+    document
+      .querySelectorAll('.sbtn2')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn3')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn1')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
 
-  document.querySelector('.btnA').style.transform = 'scale(0)'
-  document.querySelector('.btnB').style.transform = 'scale(0)'
-  document.querySelector('.btnE').style.transform = 'scale(0)'
-  document.querySelector('.btnF').style.transform = 'scale(0)'
+    document.querySelector('.btnC').style.transform = 'scale(0)'
+    document.querySelector('.btnD').style.transform = 'scale(0)'
+    document.querySelector('.btnE').style.transform = 'scale(0)'
+    document.querySelector('.btnF').style.transform = 'scale(0)'
+    document.querySelector('.btnA').style.transform = 'scale(0)'
+    document.querySelector('.btnB').style.transform = 'scale(0)'
+  }
 })
 
 let numTwo = 2
@@ -158,27 +179,47 @@ document.querySelectorAll('.sbtn2').forEach((s) =>
 )
 
 // clip2 end ==============================
-
+let nomC = 0
 // clip3=================================
 document.querySelector('.clip3').addEventListener('click', () => {
   document.querySelector('.clip3').classList.toggle('togglerC')
   // btnC.classList.toggle('btnToggler')
   block[2].classList.toggle('blockToggler')
+  if (nomC === 0) {
+    nomC = 1
+    document
+      .querySelectorAll('.sbtn1')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn2')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn3')
+      .forEach((s) => (s.style.transform = 'scale(1)'))
 
-  document
-    .querySelectorAll('.sbtn1')
-    .forEach((s) => (s.style.transform = 'scale(0)'))
-  document
-    .querySelectorAll('.sbtn2')
-    .forEach((s) => (s.style.transform = 'scale(0)'))
-  document
-    .querySelectorAll('.sbtn3')
-    .forEach((s) => (s.style.transform = 'scale(1)'))
+    document.querySelector('.btnA').style.transform = 'scale(0)'
+    document.querySelector('.btnB').style.transform = 'scale(0)'
+    document.querySelector('.btnC').style.transform = 'scale(0)'
+    document.querySelector('.btnD').style.transform = 'scale(0)'
+  } else if (nomC === 1) {
+    nomC = 0
+    document
+      .querySelectorAll('.sbtn2')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn3')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
+    document
+      .querySelectorAll('.sbtn1')
+      .forEach((s) => (s.style.transform = 'scale(0)'))
 
-  document.querySelector('.btnA').style.transform = 'scale(0)'
-  document.querySelector('.btnB').style.transform = 'scale(0)'
-  document.querySelector('.btnC').style.transform = 'scale(0)'
-  document.querySelector('.btnD').style.transform = 'scale(0)'
+    document.querySelector('.btnC').style.transform = 'scale(0)'
+    document.querySelector('.btnD').style.transform = 'scale(0)'
+    document.querySelector('.btnE').style.transform = 'scale(0)'
+    document.querySelector('.btnF').style.transform = 'scale(0)'
+    document.querySelector('.btnA').style.transform = 'scale(0)'
+    document.querySelector('.btnB').style.transform = 'scale(0)'
+  }
 })
 let numThree = 2
 
