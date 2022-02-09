@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  flex-direction: column;
+}
+.container {
+  position: relative;
+
+  width: 500px;
+  height: 500px;
+  background: #333;
+}
+
+.container .clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* z-index: 1; */
+}
+.surface {
+  /* z-index: 2; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.clip1 {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+/* .clip1:hover {
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  background: url(1.jpg);
+  background-position: center;
+} */
+/* .clip1:hover > .block {
+  height: 100%;
+  width: 100%;
+  background: url('Final.png');
+  background-position: center;
+  background-size: cover;
+  animation: anime 0.5s ease-in-out forwards;
+} */
+/* .clip2:hover > .block {
+  height: 100%;
+  width: 100%;
+  background: url('Final.png');
+  background-position: center;
+  background-size: cover;
+  animation: anime 0.5s ease-in-out forwards;
+} */
+/* .clip3:hover > .block {
+  height: 100%;
+  width: 100%;
+  background: url('Final.png');
+  background-position: center;
+  background-size: cover;
+  animation: anime 0.5s ease-in-out forwards;
+} */
+
+.clip2 {
+  /* background: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+  /* position: relative; */
+  /* animation: animate 0.75s ease-in-out forwards; */
+
+  clip-path: polygon(100% 0, 51% 0, 0 100%, 51% 100%);
+  /* transition: 0.5s; */
+  z-index: 4;
+}
+/* .clip2:hover {
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  background: url(2.jpg);
+  background-position: center;
+} */
+.clip3 {
+  /* background: blue; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+  /* position: relative; */
+  /* animation: animate 0.75s ease-in-out forwards; */
+
+  /* clip-path: polygon(100% 0, 51% 0, 0 100%, 51% 100%); */
+  /* transition: 0.5s; */
+  z-index: 4;
+  /* position: relative; */
+  /* animation: animate 0.75s ease-in-out forwards; */
+
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 51% 100%);
+  /* transition: 0.5s; */
+}
+/* .clip3:hover {
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  background: url(3.jpg);
+  background-position: center;
+} */
+.blocks {
+  z-index: 3;
+  display: block;
+  height: 25px;
+  width: 25px;
+  /* background: red; */
+  position: relative;
+  -webkit-animation: animate 0.75s ease-in-out forwards;
+}
+
+.blocks:nth-child(even) {
+  -webkit-animation: animate 1s ease-in-out forwards;
+}
+.blocks:nth-child(5n + 5) {
+  -webkit-animation: animate 2.5s ease-in-out forwards;
+}
+
+.blocks:nth-child(7n + 3) {
+  -webkit-animation: animate 1.5s ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(500px);
+  }
+  50% {
+    opacity: 1;
+    /* transform: scale(1) translateY(500px); */
+    background: url(pic.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    background: url(pic.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+@keyframes anime {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.text {
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.text h1 {
+  font-family: 'Quintessential', cursive;
+  text-transform: capitalize;
+}
+.btnContainer {
+  position: relative;
+}
+
+.btn {
+  height: 3rem;
+  width: 6rem;
+  font-size: 1rem;
+  background: #222;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  /* margin: 2rem; */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  transform: scale(0);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+.btn:hover {
+  background: #fff;
+  color: #222;
+  border: 2px solid #222;
+}
+@media (max-width: 600px) {
+  @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .section {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    flex-direction: column;
+  }
+  .container {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+    background: #333;
+  }
+
+  .container .clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* z-index: 1; */
+  }
+  .surface {
+    /* z-index: 2; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+  .clip1 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+
+    z-index: 4;
+    top: 0;
+    left: 0;
+  }
+  /* .clip1:hover {
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+    background: url(1.jpg);
+    background-position: center;
+  } */
+  /* .clip1:hover > .block {
+    height: 100%;
+    width: 100%;
+    background: url('Final.png');
+    background-position: center;
+    background-size: 300px 300px;
+
+    animation: anime 0.5s ease-in-out forwards;
+  } */
+  /* .clip2:hover > .block {
+    height: 100%;
+    width: 100%;
+    background: url('Final.png');
+    background-position: center;
+    background-size: 300px 300px;
+    animation: anime 0.5s ease-in-out forwards;
+  } */
+  /* .clip3:hover > .block {
+    height: 100%;
+    width: 100%;
+    background: url('Final.png');
+    background-position: center;
+    background-size: 300px 300px;
+    animation: anime 0.5s ease-in-out forwards;
+  } */
+
+  .clip2 {
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    /* position: relative; */
+    /* animation: animate 0.75s ease-in-out forwards; */
+
+    clip-path: polygon(100% 0, 51% 0, 0 100%, 51% 100%);
+    /* transition: 0.5s; */
+    z-index: 4;
+  }
+  /* .clip2:hover {
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+    background: url(2.jpg);
+    background-position: center;
+  } */
+  .clip3 {
+    /* background: blue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    /* position: relative; */
+    /* animation: animate 0.75s ease-in-out forwards; */
+
+    /* clip-path: polygon(100% 0, 51% 0, 0 100%, 51% 100%); */
+    /* transition: 0.5s; */
+    z-index: 4;
+    /* position: relative; */
+    /* animation: animate 0.75s ease-in-out forwards; */
+
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 51% 100%);
+    /* transition: 0.5s; */
+  }
+  /* .clip3:hover {
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+    background: url(3.jpg);
+    background-position: center;
+  } */
+  .blocks {
+    z-index: 3;
+    display: block;
+    height: 15px;
+    width: 15px;
+    /* background: red; */
+    position: relative;
+    animation: animate 0.75s ease-in-out forwards;
+  }
+
+  .blocks:nth-child(even) {
+    animation: animate 1s ease-in-out forwards;
+  }
+  .blocks:nth-child(5n + 5) {
+    animation: animate 2.5s ease-in-out forwards;
+  }
+
+  .blocks:nth-child(7n + 3) {
+    animation: animate 1.5s ease-in-out forwards;
+  }
+
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: scale(0) translateY(500px);
+    }
+    50% {
+      opacity: 1;
+      /* transform: scale(1) translateY(500px); */
+      background: url(pic.jpg);
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 300px 300px;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0px);
+      background: url(pic.jpg);
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 300px 300px;
+    }
+  }
+  @keyframes anime {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.5);
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .text {
+    height: 100%;
+    width: 100%;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .text h1 {
+    font-family: 'Quintessential', cursive;
+    text-transform: capitalize;
+  }
+  .btnContainer {
+    position: relative;
+  }
+
+  .btn {
+    height: 3rem;
+    width: 6rem;
+    font-size: 1rem;
+    background: #fff;
+    border: 2px solid #ff0;
+    color: #222;
+    border-radius: 10px;
+    /* margin: 2rem; */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: block;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    transform: scale(0);
+  }
+  .btn:active {
+    transform: scale(0.9);
+    outline: none;
+  }
+
+  .togglerA {
+    background: url(1.jpg);
+    background-position: center;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  }
+  .togglerB {
+    background: url(2.jpg);
+    background-position: center;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  }
+  .togglerC {
+    background: url(3.jpg);
+    background-position: center;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  }
+  .btnToggler {
+    transform: scale(1);
+  }
+  .blockToggler {
+    height: 100%;
+    width: 100%;
+    background: url('Final.png');
+    background-position: center;
+    background-size: 300px 300px;
+    -webkit-animation: anime 0.5s ease-in-out forwards;
+  }
+}
+
+.togglerA {
+  background: url(1.jpg);
+  background-position: center;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  background-size: contain;
+}
+.togglerB {
+  background: url(2.jpg);
+  background-position: center;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  background-size: contain;
+}
+.togglerC {
+  background: url(3.jpg);
+  background-position: center;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  background-size: contain;
+}
+.btnToggler {
+  transform: scale(1);
+}
+.blockToggler {
+  height: 100%;
+  width: 100%;
+  background: url('Final.png');
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: anime 0.5s ease-in-out forwards;
+}
+/* not inside the media screen */
+
+.btn {
+  height: 3rem;
+  width: 6rem;
+  font-size: 1rem;
+  background: #fff;
+  border: 2px solid #ff0;
+  color: #222;
+  border-radius: 10px;
+  /* margin: 2rem; */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: block;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  transform: scale(0);
+}
+
+.shift {
+  position: absolute;
+  top: 2rem;
+  left: -9rem;
+  height: 3rem;
+  width: 10rem;
+  background: #fff;
+  border: 3px solid #ff0;
+  border-radius: 10px;
+  transform: scale(0);
+}
+.shifter {
+  transform: translateX(100%);
+}
+.btn1 {
+  position: relative;
+  height: calc(3rem - 2px);
+  width: 5rem;
+  background: #ff0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+  color: #222;
+}
+.btn2 {
+  position: relative;
+  height: calc(3rem - 2px);
+  width: 5rem;
+  background: #ff0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+  color: #222;
+}
+.btn3 {
+  position: relative;
+  height: calc(3rem - 2px);
+  width: 5rem;
+  background: #ff0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+  color: #222;
+}
+.btn4 {
+  position: relative;
+  height: calc(3rem - 2px);
+  width: 5rem;
+  background: #ff0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+  color: #222;
+}
+.btn5 {
+  position: relative;
+  height: calc(3rem - 2px);
+  width: 5rem;
+  background: #ff0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+  color: #222;
+}
+.btn6 {
+  position: relative;
+  height: calc(3rem - 2px);
+  width: 5rem;
+  background: #ff0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(0);
+  color: #222;
+}
+a:link {
+  color: #222;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+a:active {
+  color: #222;
+  text-decoration: none;
+}

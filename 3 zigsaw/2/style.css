@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+.grid {
+  width: 500px;
+  height: 500px;
+  border: 5px solid #999;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background: #888;
+  box-shadow: 0px 0px 20px #fff;
+}
+.clks {
+  width: 166.67px;
+  height: 166.67px;
+  font-size: 0.1px;
+}
+#pic1 {
+  background: url('1.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic2 {
+  background: url('2.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic3 {
+  background: url('3.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic4 {
+  background: url('4.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic5 {
+  background: url('5.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic6 {
+  background: url('6.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic7 {
+  background: url('7.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic8 {
+  background: url('8.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+#pic9 {
+  background: url('9.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+
+.launch {
+  width: 170px;
+  margin: auto;
+  border: 2px solid #999;
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  color: black;
+  background: #999;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #fff;
+  text-shadow: 0px 0px 10px #000;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+.launch:hover {
+  color: #f55;
+  text-shadow: 0px 0px 20px #f55;
+}
+.moves {
+  width: 250px;
+  height: 40px;
+  margin: auto;
+  border: 2px solid #999;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+  color: #000;
+  background: #999;
+  box-shadow: 0px 0px 20px #999;
+  text-shadow: 0px 0px 20px #000;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
